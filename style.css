@@ -48,6 +48,9 @@ header span {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out; 
 }
+.add-button:hover {
+    background-color: #426789;
+}
 
 header a {
   text-decoration: none;
@@ -233,6 +236,15 @@ footer {
 
 .review-title {
   margin-bottom: 5px;
+}
+
+#main-nav ul{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 24px;
+  align-items: center;
+  color:white;
 }
 
 @media (max-width: 540px) {
