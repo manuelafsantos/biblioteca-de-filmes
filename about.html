@@ -1,61 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Análise de filme</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-
-    <body>
-        <header>
-            <a href="../index.html" class="logo-link">
-                <div>
-                    <img src="../images/mlib-icon.svg" alt="MLib Logo Icon" height="32">
-                    <span>MLib</span>
-                </div>
-            </a>
-
-            <nav>
-                <a href="contact.html">
-                    <button class="add-button" aria-label="Adicionar nova análise">+</button>
-                </a>
-            </nav>
-        </header>
-
-        <main>
-            <div class="movie-details-container">
-
-                <div class="movie-poster">
-                    <img src="https://placehold.co/380x570" alt="Poster do filme">
-                </div>
-
-                <div class="movie-details-info">
-                    <h1 class="movie-title">Jogos Vorazes: Em Chamas</h1>
-
-                    <div class="movie-section">
-                        <p><strong>Visto em:</strong> 08/09/2026</p>
-                    </div>
-
-                    <div class="movie-section rating-details">
-                        <p><strong>Nota:</strong></p>
-                        <div class="rating">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                    </div>
-
-                    <div class="movie-section">
-                        <p class="review-title"><strong>Análise:</strong></p>
-                        <p>O melhor filme de todos os tempos. Finnick e Petta são os melhores personagens criados na história do cinema. </p>
-                    </div>
-                </div>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Vorazes: Em Chamas | MLib</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link" aria-label="MLib, página inicial">
+            <img src="images/mlib-icon.svg" alt="" height="32"><span>MLib</span>
+        </a>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html" aria-current="page">Sobre o filme</a></li>
+                <li><a href="contact.html">Nova análise</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="movie-details-container" id="detalhes">
+            <div class="movie-poster"><img src="images/em chamas.jpg" alt="Cartaz de Jogos Vorazes: Em Chamas"></div>
+            <div class="movie-details-info">
+                <h1>Jogos Vorazes: Em Chamas</h1>
+                <ul class="movie-facts" aria-label="Informações do filme">
+                    <li><strong>Assistido em:</strong> 08/09/2026</li>
+                    <li class="rating-details"><strong>Nota:</strong> <span class="rating" aria-label="5 de 5 estrelas">★★★★★</span></li>
+                </ul>
+                <section class="movie-section" id="analise">
+                    <h2>Análise</h2>
+                    <p>O melhor filme de todos os tempos. Finnick e Peeta são alguns dos melhores personagens criados na história do cinema.</p>
+                </section>
+                <a href="index.html#catalogo">Voltar à lista de filmes</a>
             </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 MLib &ndash; My Movie Library</p>
-        </footer>
-    </body>
-
+        </article>
+    </main>
+    <footer><p>&copy; 2026 MLib — Minha Biblioteca de Filmes</p></footer>
+</body>
 </html>

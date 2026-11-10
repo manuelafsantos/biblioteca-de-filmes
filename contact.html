@@ -1,94 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Adicione uma nova análise</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-
-    <body>
-        <header>
-            <a href="../index.html" class="logo-link">
-                <div>
-                    <img src="../images/mlib-icon.svg" alt="MLib Logo Icon" height="32">
-                    <span>MLib</span>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova análise | MLib</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link" aria-label="MLib, página inicial">
+            <img src="images/mlib-icon.svg" alt="" height="32"><span>MLib</span>
+        </a>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre o filme</a></li>
+                <li><a href="contact.html" aria-current="page">Nova análise</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form-page-container" aria-labelledby="form-title">
+            <h1 id="form-title">Nova análise</h1>
+            <form class="form-container" action="contact.html" method="get">
+                <div class="form-group">
+                    <label for="movie-name">Nome do filme</label>
+                    <input type="text" id="movie-name" name="filme" required placeholder="Digite o nome do filme">
                 </div>
-            </a>
-
-            <nav>
-                <button class="add-button" aria-label="Add new movie review">+</button>
-            </nav>
-        </header>
-
-        <main>
-            <div class="form-page-container">
-                <h2>Nova Análise</h2>
-                <div class="form-container">
-                    <form>
-                    <div class="form-group">
-                        <label for="movie-name">Nome do Filme</label>
-                        <input type="text" id="movie-name" placeholder="Digite o nome do filme">
-                    </div>
-
-                    <form action="contact.html" method="GET">
-                        <div class="form-group">
-                            <label for="nome">Nome do Usuário</label>
-                            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email do Usuário</label>
-                            <input type="email" id="email" name="email" required placeholder="Digite seu email">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="review-text">Mensagem</label>
-                            <textarea id="review-text" rows="5" name="mensagem" required placeholder="Escreva suas ideias aqui..."></textarea>
-                        </div>
-
-                    </form>
-
-                    <div class="form-group">
-                        <label for="poster-url">URL do Poster</label>
-                        <input type="text" id="poster-url" placeholder="Cole a URL da imagem (jpg ou png)">
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                        <label for="rating-select">Estrelas</label>
-                            <select id="rating-select">
-                                <option value="">Escolha uma nota</option>
-                                <option value="1">★☆☆☆☆ - 1 Estrela</option>
-                                <option value="2">★★☆☆☆ - 2 Estrelas</option>
-                                <option value="3">★★★☆☆ - 3 Estrelas</option>
-                                <option value="4">★★★★☆ - 4 Estrelas</option>
-                                <option value="5">★★★★★ - 5 Estrelas</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="watched-date">Data de Visualização</label>
-                            <input type="date" id="watched-date">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-button">Add</button>
-
-                    </form>
+                <div class="form-group">
+                    <label for="nome">Seu nome</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
                 </div>
-            </div>
-
-        </main>
-
-        <footer>
-            <p>
-                Este formulário possui finalidade exclusivamente demonstrativa. Utilize apenas dados fictícios ao preenchê-lo, pois todas as informações inseridas serão exibidas no endereço (URL) do navegador após o envio. Os dados não serão armazenados, registrados ou encaminhados por e-mail. Portanto, nenhuma mensagem será efetivamente recebida.
-            </p>
-            <p>&copy; 2025 MLib &ndash; My Movie Library</p>
-        </footer>
-    </body>
-
+                <div class="form-group">
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Análise</label>
+                    <textarea id="review-text" rows="5" name="mensagem" required placeholder="Escreva sua opinião sobre o filme"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="poster-url">URL do cartaz (opcional)</label>
+                    <input type="url" id="poster-url" name="cartaz" placeholder="https://exemplo.com/cartaz.jpg">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rating-select">Nota</label>
+                        <select id="rating-select" name="nota" required>
+                            <option value="">Escolha uma nota</option>
+                            <option value="1">1 estrela</option><option value="2">2 estrelas</option>
+                            <option value="3">3 estrelas</option><option value="4">4 estrelas</option>
+                            <option value="5">5 estrelas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="watched-date">Data em que assistiu</label>
+                        <input type="date" id="watched-date" name="data">
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">Enviar análise</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Este formulário é demonstrativo. Use dados fictícios: as informações serão exibidas no endereço do navegador após o envio e não serão armazenadas nem encaminhadas.</p>
+        <p>&copy; 2026 MLib — Minha Biblioteca de Filmes</p>
+    </footer>
+</body>
 </html>
