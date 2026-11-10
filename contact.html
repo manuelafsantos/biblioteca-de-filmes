@@ -5,20 +5,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Adicione uma nova análise</title>
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header>
-            <a href="../index.html" class="logo-link">
+            <a href="index.html" class="logo-link">
                 <div>
-                    <img src="../images/mlib-icon.svg" alt="MLib Logo Icon" height="32">
+                    <img src="images/mlib-icon.svg" alt="MLib Logo Icon" height="32">
                     <span>MLib</span>
                 </div>
             </a>
 
-            <nav>
-                <button class="add-button" aria-label="Add new movie review">+</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="about.html">Filmes</a></li>
+                    <li><button class="add-button" aria-label="Add new movie review">+</button></li>
+                </ul>
             </nav>
         </header>
 
@@ -27,12 +31,11 @@
                 <h2>Nova Análise</h2>
                 <div class="form-container">
                     <form>
-                    <div class="form-group">
+                    <div class="form-group" action="contact.html" method="GET">
                         <label for="movie-name">Nome do Filme</label>
                         <input type="text" id="movie-name" placeholder="Digite o nome do filme">
                     </div>
 
-                    <form action="contact.html" method="GET">
                         <div class="form-group">
                             <label for="nome">Nome do Usuário</label>
                             <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
@@ -47,8 +50,6 @@
                             <label for="review-text">Mensagem</label>
                             <textarea id="review-text" rows="5" name="mensagem" required placeholder="Escreva suas ideias aqui..."></textarea>
                         </div>
-
-                    </form>
 
                     <div class="form-group">
                         <label for="poster-url">URL do Poster</label>
