@@ -309,7 +309,7 @@ img {
     padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .movie-list-container {
     justify-content: center;
   }
@@ -358,7 +358,7 @@ img {
 
   .movie-poster img {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
   }
 
   .rating {
@@ -368,9 +368,13 @@ img {
   .movie-details-info h1 {
     font-size: 24px;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .movie-details-info p {
     font-size: 16px;
+    width: 100%;
+    max-width: 100%;
   }
 }
