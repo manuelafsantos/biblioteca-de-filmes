@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Adicione uma nova análise</title>
+        <title>My Movie Library - Add New Review</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -17,75 +17,77 @@
                 </div>
             </a>
 
-            <nav id="main-nav">
+            
+            <nav class="nav-links">
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="about.html">Filmes</a></li>
-                    <li><button class="add-button" aria-label="Add new movie review">+</button></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="contact.html">Contato</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
             <div class="form-page-container">
-                <h2>Nova Análise</h2>
-                <div class="form-container">
-                    <form>
-                    <div class="form-group" action="contact.html" method="GET">
-                        <label for="movie-name">Nome do Filme</label>
-                        <input type="text" id="movie-name" placeholder="Digite o nome do filme">
-                    </div>
 
+                <h2>New Review</h2>
+                <div class="form-container">
+                    <form action="contact.html" method="GET">
                         <div class="form-group">
-                            <label for="nome">Nome do Usuário</label>
-                            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                            <label for="movie-name">Movie Name</label>
+                            <input type="text" id="movie-name" placeholder="Enter the movie title">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email do Usuário</label>
+                            <label for="poster-url">Poster URL</label>
+                            <input type="text" id="poster-url" placeholder="Paste image URL (jpg or png)">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rating-select">Stars</label>
+                                <select id="rating-select">
+                                    <option value="">Choose a rating</option>
+                                    <option value="1">★☆☆☆☆ - 1 Star</option>
+                                    <option value="2">★★☆☆☆ - 2 Stars</option>
+                                    <option value="3">★★★☆☆ - 3 Stars</option>
+                                    <option value="4">★★★★☆ - 4 Stars</option>
+                                    <option value="5">★★★★★ - 5 Stars</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="watched-date">Watched Date</label>
+                                <input type="date" id="watched-date">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-text">Minha análise</label>
+                            <textarea id="mensagem" rows="5" name="mensagem" required placeholder="Digite sua ideia aqui"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Nome de usuário</label>
+                            <input type="text" id="username"  name="nome" required placeholder="Digite seu nome de usuário">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required placeholder="Digite seu email">
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="review-text">Mensagem</label>
-                            <textarea id="review-text" rows="5" name="mensagem" required placeholder="Escreva suas ideias aqui..."></textarea>
-                        </div>
 
-                    <div class="form-group">
-                        <label for="poster-url">URL do Poster</label>
-                        <input type="text" id="poster-url" placeholder="Cole a URL da imagem (jpg ou png)">
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                        <label for="rating-select">Estrelas</label>
-                            <select id="rating-select">
-                                <option value="">Escolha uma nota</option>
-                                <option value="1">★☆☆☆☆ - 1 Estrela</option>
-                                <option value="2">★★☆☆☆ - 2 Estrelas</option>
-                                <option value="3">★★★☆☆ - 3 Estrelas</option>
-                                <option value="4">★★★★☆ - 4 Estrelas</option>
-                                <option value="5">★★★★★ - 5 Estrelas</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="watched-date">Data de Visualização</label>
-                            <input type="date" id="watched-date">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-button">Add</button>
+                        <button type="submit" class="add-button">Add</button>
 
                     </form>
                 </div>
             </div>
 
+
         </main>
 
         <footer>
-            <p>
+            <p id="mensagem-final">
                 Este formulário possui finalidade exclusivamente demonstrativa. Utilize apenas dados fictícios ao preenchê-lo, pois todas as informações inseridas serão exibidas no endereço (URL) do navegador após o envio. Os dados não serão armazenados, registrados ou encaminhados por e-mail. Portanto, nenhuma mensagem será efetivamente recebida.
             </p>
             <p>&copy; 2025 MLib &ndash; My Movie Library</p>
