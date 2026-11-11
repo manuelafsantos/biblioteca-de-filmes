@@ -309,7 +309,7 @@ img {
     padding: 0;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
   .movie-list-container {
     justify-content: center;
   }
